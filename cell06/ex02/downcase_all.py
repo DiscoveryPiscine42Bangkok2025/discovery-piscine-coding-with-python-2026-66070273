@@ -5,12 +5,11 @@ def downcase_it(s):
     return s.lower()
 
 def main():
-    params = sys.argv[1:]
-    if len(params) == 0:
-        print("none")
+    if len(sys.argv) > 1:
+        for arg in sys.argv[1:]:
+            print(downcase_it(arg))
     else:
-        for p in params:
-            print(downcase_it(p))
+        print("none")
 
 if __name__ == "__main__":
     main()
